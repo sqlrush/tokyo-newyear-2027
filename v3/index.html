@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>东京，奢华的那一面｜2027 新年奢华攻略</title>
+  <meta name="description" content="2027 年 1 月 1 日至 5 日东京奢华攻略：新年订得到的星级餐厅、品牌餐厅与旗舰店、酒店酒吧与水疗、奢华体验，逐日标明新年营业，附奢华酒店 1/1 与 1/4 房价对比。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav" aria-label="页面导航">
+    <div class="wrap">
+      <a class="brand" href="#top">奢华的东京</a>
+      <ul>
+        <li><a href="#picks-sec">精选</a></li>
+        <li><a href="#oneday">五日行程</a></li>
+        <li><a href="#hotels">酒店房价</a></li>
+        <li><a href="#finder">按日期找</a></li>
+        <li><a href="#booking">何时订</a></li>
+      </ul>
+      <button class="pill-btn" id="themeBtn" type="button" aria-label="切换深浅色">深色</button>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <img src="img/hero.jpg" alt="" fetchpriority="high">
+    <div class="wrap">
+      <h1>东京，奢华的那一面</h1>
+      <p>新年五天也订得到的星级餐桌、品牌餐厅、酒店酒吧与水疗，附真实价格。</p>
+      <div class="cta">
+        <a class="btn btn-solid" href="#oneday">看五日行程</a>
+        <a class="btn btn-line" href="#finder">按日期找</a>
+      </div>
+    </div>
+    <span class="credit" id="heroCredit"></span>
+  </header>
+
+  <main>
+    <section class="sec" id="picks-sec">
+      <div class="wrap">
+        <h2>这次最想推荐的三处</h2>
+        <p class="lede">新年期间确定能订、价格已经公布的三件事。</p>
+        <div class="picks" id="picks"></div>
+      </div>
+    </section>
+
+    <section class="sec" id="oneday">
+      <div class="wrap">
+        <h2>五日行程：每天怎么走，花多少钱</h2>
+        <p class="lede">景点、餐厅和体验都按当天真实的营业时间排好，交通写在每一项下面，右边是两人合计和全程累计。点名字可以跳到详情。</p>
+        <div class="chips" id="dayTabs" role="group" aria-label="选择日期"></div>
+        <div class="ledger-wrap">
+          <table class="ledger"><tbody id="ledger"></tbody></table>
+          <aside class="total" id="total" aria-live="polite"></aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="hotels">
+      <div class="wrap">
+        <h2>1/1 还是 1/4：同一家酒店差两到三倍</h2>
+        <p class="lede">1/1 那晚还没订。下面是乐天上实时查到的最低价，元旦夜和 1/4 夜放在一起比。</p>
+        <div class="chart-box reveal">
+          <div class="legend"><span><i class="j1"></i>1/1 入住（实心）</span><span><i class="j4"></i>1/4 入住（空心）</span></div>
+          <div id="chart"></div>
+          <div class="chart-foot"><span id="hotelChecked"></span><button class="linkbtn" id="tableBtn" type="button">看表格</button></div>
+          <table class="htable" id="htable" hidden></table>
+        </div>
+        <div class="hotel-notes" id="hotelNotes"></div>
+      </div>
+    </section>
+
+    <section class="sec" id="finder">
+      <div class="wrap">
+        <h2>选一天，看哪里开着</h2>
+        <p class="lede">景点、高端餐厅和品牌店的新年休息日各不相同。先点日期，再按类别筛选；点开每一项能看到价格、预订方式和五天各自的营业时间。</p>
+        <div class="dayband" id="dayband" role="group" aria-label="选择日期"></div>
+        <div class="chips" id="groupChips" role="group" aria-label="按类别筛选"></div>
+        <div class="found" id="found" aria-live="polite"></div>
+        <ul class="index" id="index"></ul>
+      </div>
+    </section>
+
+    <section class="sec" id="booking">
+      <div class="wrap">
+        <h2>什么时候订</h2>
+        <p class="lede">奢华的东西大多要提前抢。按开放预订的日子排了一条时间线。</p>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>整理于 2026 年 11 月。价格和新年营业能查到 2027 年的就用 2027 年，否则参考 2026 年元旦，每一项都标了年份，出发前请按链接再核对。另外两版：<a href="../v1/">第一版：街区与餐厅</a>，<a href="../v2/">第二版：小众轻奢景点</a>。</p>
+      <div class="cols">
+        <div>
+          <h3>主要来源</h3>
+          <ul id="sources"></ul>
+        </div>
+        <div>
+          <h3>图片来源</h3>
+          <p>照片均来自 Wikimedia Commons，按各自的授权使用。</p>
+          <ul id="credits"></ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
