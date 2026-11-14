@@ -1,10 +1,12 @@
-"""把 ../0X-* 三份攻略同步成可发布的静态站点（v1/、v2/、v3/），并改写版本之间的链接。
+"""把 ../0X-* 各版攻略同步成可发布的静态站点（v1/ 到 v5/），并改写版本之间的链接。
 
-用法（在仓库根目录）：python3 scripts/sync_site.py
+用法（在仓库根目录）：python3 scripts/sync_site.py [v4 v5 ...]
+不带参数时同步全部版本；带参数时只同步指定的版本（已压缩过图片的版本不必重同步）。
 只复制网页需要的文件：index.html、styles.css、app.js、data.js、img/。
 """
 import logging
 import shutil
+import sys
 from pathlib import Path
 
 log = logging.getLogger("sync_site")
@@ -15,6 +17,8 @@ VERSIONS = {
     "v1": "05-东京新年攻略",
     "v2": "06-东京小众轻奢",
     "v3": "07-东京奢华",
+    "v4": "08-东京逛街漂亮饭",
+    "v5": "09-东京游戏机之旅",
 }
 FILES = ("index.html", "styles.css", "app.js", "data.js")
 LINK_REWRITES = {f"../{src}/index.html": f"../{dest}/" for dest, src in VERSIONS.items()}
@@ -42,11 +46,14 @@ def sync_one(dest: str, src_name: str) -> None:
     log.info("同步 %s <- %s（%d 张图片）", dest, src_name, len(list((out / "img").glob("*"))))
 
 
-def main() -> None:
-    for dest, src_name in VERSIONS.items():
-        sync_one(dest, src_name)
+def main(argv: list[str]) -> None:
+    unknown = [v for v in argv if v not in VERSIONS]
+    if unknown:
+        raise SystemExit(f"不认识的版本：{unknown}，可选 {list(VERSIONS)}")
+    for dest in argv or list(VERSIONS):
+        sync_one(dest, VERSIONS[dest])
 
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(message)s")
-    main()
+    main(sys.argv[1:])
