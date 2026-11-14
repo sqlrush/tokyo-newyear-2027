@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>东京，人少的那一面｜2027 新年小众轻奢景点</title>
+  <meta name="description" content="2027 年 1 月 1 日至 5 日东京小众、轻奢景点：庭园、名建筑、私人美术馆、品牌艺廊、寄席与能乐、酒店下午茶，逐日标明新年开放情况。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav" aria-label="页面导航">
+    <div class="wrap">
+      <a class="brand" href="#top">人少的东京</a>
+      <ul>
+        <li><a href="#picks-sec">精选</a></li>
+        <li><a href="#finder">按日期找</a></li>
+        <li><a href="#routes-sec">半日路线</a></li>
+        <li><a href="#notes-sec">须知</a></li>
+        <li><a href="../v1/">第一版：街区与餐厅</a></li>
+      </ul>
+      <button class="pill-btn" id="themeBtn" type="button" aria-label="切换深浅色">深色</button>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <img src="img/hero.jpg" alt="" fetchpriority="high" id="heroImg">
+    <div class="wrap">
+      <h1>东京，人少的那一面</h1>
+      <p>新年五天，避开人潮的庭园、名建筑、私人美术馆和酒店下午茶。</p>
+      <div class="cta">
+        <a class="btn btn-solid" href="#finder">按日期找</a>
+        <a class="btn btn-line" href="#routes-sec">看半日路线</a>
+      </div>
+    </div>
+    <span class="credit" id="heroCredit"></span>
+  </header>
+
+  <main>
+    <section class="sec" id="picks-sec">
+      <div class="wrap">
+        <h2>这次最想推荐的三处</h2>
+        <p class="lede">游客少、空间讲究，新年期间也确定能去。</p>
+        <div class="picks" id="picks"></div>
+      </div>
+    </section>
+
+    <section class="sec" id="finder">
+      <div class="wrap">
+        <h2>选一天，看哪里开着</h2>
+        <p class="lede">小众景点的新年休息日各不相同，美术馆和庭园尤其多。先点日期，再按类别筛选；点开每一项能看到五天各自的开放时间。</p>
+        <div class="dayband" id="dayband" role="group" aria-label="选择日期"></div>
+        <div class="chips" id="groupChips" role="group" aria-label="按类别筛选"></div>
+        <div class="found" id="found" aria-live="polite"></div>
+        <ul class="index" id="index"></ul>
+      </div>
+    </section>
+
+    <section class="sec" id="routes-sec">
+      <div class="wrap">
+        <h2>四条半日路线</h2>
+        <p class="lede">每条只串两三个点，留出喝茶和发呆的时间。左右滑动查看，点地名可以跳到上面的详情。</p>
+        <div class="routes" id="routes"></div>
+      </div>
+    </section>
+
+    <section class="sec" id="notes-sec">
+      <div class="wrap">
+        <h2>小众景点的新年规矩</h2>
+        <p class="lede">人少的地方，规矩往往更多。出发前看一眼。</p>
+        <div class="notes" id="notes"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>整理于 2026 年 11 月。新年开放安排能查到 2027 年的就用 2027 年，否则参考 2026 年元旦，出发前请按每一项下面的链接再核对。想看街区和餐厅，请回到<a href="../v1/">第一版攻略</a>。</p>
+      <div class="cols">
+        <div>
+          <h3>主要来源</h3>
+          <ul id="sources"></ul>
+        </div>
+        <div>
+          <h3>图片来源</h3>
+          <p>照片均来自 Wikimedia Commons，按各自的授权使用。</p>
+          <ul id="credits"></ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
