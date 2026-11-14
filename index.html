@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>东京新年五日｜2027.1.1 至 1.5 三份攻略</title>
+  <meta name="description" content="2027 年元旦东京五日攻略的三个版本：街区与餐厅、小众轻奢景点、奢华版五日行程。">
+  <style>
+    :root {
+      --bg: #eceef1; --surface: #f7f8fa; --text: #11151c; --muted: #525a66; --line: #cdd3da; --accent: #1e4c9a; --radius: 4px;
+      --display: "Songti SC", "STSong", "Noto Serif SC", "Source Han Serif SC", serif;
+      --sans: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+      color-scheme: light;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0d1015; --surface: #151920; --text: #e7eaee; --muted: #9aa3af; --line: #29303a; --accent: #86a8ee; color-scheme: dark; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+    header { padding: 88px 0 40px; }
+    h1 { font-family: var(--display); font-size: clamp(36px, 5.4vw, 64px); line-height: 1.15; margin: 0 0 14px; }
+    header p { color: var(--muted); font-size: 17px; max-width: 36em; margin: 0; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding-bottom: 88px; }
+    a.card { display: flex; flex-direction: column; text-decoration: none; color: inherit; background: var(--surface); border-radius: var(--radius); overflow: hidden; transition: transform 0.25s cubic-bezier(.16,1,.3,1); }
+    a.card:hover { transform: translateY(-3px); }
+    a.card:hover h2 { color: var(--accent); }
+    a.card:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    a.card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+    .body { padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 8px; }
+    .k { font-size: 13px; color: var(--accent); font-weight: 600; }
+    h2 { font-family: var(--display); font-size: 24px; line-height: 1.35; margin: 0; transition: color 0.2s; }
+    .body p { margin: 0; color: var(--muted); font-size: 15px; }
+    footer { border-top: 1px solid var(--line); padding: 28px 0 48px; color: var(--muted); font-size: 13.5px; }
+    @media (max-width: 900px) {
+      .wrap { padding: 0 18px; }
+      header { padding: 56px 0 28px; }
+      .grid { grid-template-columns: 1fr; gap: 18px; padding-bottom: 56px; }
+      a.card { flex-direction: row; }
+      a.card img { width: 38%; aspect-ratio: auto; min-height: 100%; }
+      .body { padding: 16px; }
+      h2 { font-size: 20px; }
+      .body p { font-size: 14px; }
+    }
+    @media (max-width: 420px) { a.card { flex-direction: column; } a.card img { width: 100%; min-height: 0; height: auto; aspect-ratio: 16 / 9; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>东京，新年五日</h1>
+      <p>2027 年 1 月 1 日至 5 日，两个人。三份攻略，各有侧重，元旦期间哪里开门都按天标好了。</p>
+    </div>
+  </header>
+  <main class="wrap grid">
+    <a class="card" href="v1/">
+      <img src="v1/img/hero-sensoji.jpg" alt="元旦浅草寺的初诣人潮" loading="lazy">
+      <div class="body">
+        <span class="k">第一版</span>
+        <h2>街区与餐厅</h2>
+        <p>轻奢、现代、古典、生活气息的 10 个街区，69 家餐厅按新年营业筛选，附五日路线。</p>
+      </div>
+    </a>
+    <a class="card" href="v2/">
+      <img src="v2/img/hero.jpg" alt="滨离宫的茶屋木桥和汐留高楼" loading="lazy">
+      <div class="body">
+        <span class="k">第二版</span>
+        <h2>人少的东京</h2>
+        <p>36 处小众轻奢景点：庭园、名建筑、私人美术馆、寄席与能乐，按日期看哪里开着。</p>
+      </div>
+    </a>
+    <a class="card" href="v3/">
+      <img src="v3/img/hero.jpg" alt="宝格丽银座塔的节日灯饰" loading="lazy">
+      <div class="body">
+        <span class="k">第三版</span>
+        <h2>奢华的东京</h2>
+        <p>星级餐厅、品牌餐厅、酒店酒吧与水疗、歌舞伎栈敷席，五日行程逐项算好花费。</p>
+      </div>
+    </a>
+  </main>
+  <footer>
+    <div class="wrap">整理于 2026 年 11 月。新年营业以各店官网为准，出发前请再核对。照片来自 Wikimedia Commons，作者与授权见各版页脚。</div>
+  </footer>
+</body>
+</html>

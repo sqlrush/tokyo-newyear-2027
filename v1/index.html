@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>东京新年五日｜2027.1.1 至 1.5 街区与餐厅攻略</title>
+  <meta name="description" content="2027 年元旦东京五日攻略：轻奢、现代、古典与生活气息的街区，元旦期间的营业情况，以及各类餐厅推荐。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav" aria-label="页面导航">
+    <div class="wrap">
+      <a class="brand" href="#top">东京 <b>新年五日</b></a>
+      <ul>
+        <li><a href="#calendar">新年日历</a></li>
+        <li><a href="#areas-sec">街区</a></li>
+        <li><a href="#plan">五日路线</a></li>
+        <li><a href="#food">餐厅</a></li>
+        <li><a href="#jan1">元旦吃饭</a></li>
+        <li><a href="#tips">须知</a></li>
+      </ul>
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="切换深浅色">深色</button>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">2027 元旦，两个人，五天</p>
+        <h1>在东京，<em>过个新年</em></h1>
+        <p class="lead">从初诣到初卖：挑对街区，订对餐厅，避开元旦关门的坑。</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#plan">看五日路线</a>
+          <a class="btn btn-ghost" href="#food">找餐厅</a>
+        </div>
+      </div>
+      <figure class="reveal">
+        <img src="img/hero-sensoji.jpg" alt="元旦当天浅草寺宝藏门前的初诣人潮，远处是东京晴空塔" fetchpriority="high">
+        <figcaption>2023 年 1 月 1 日，浅草寺宝藏门前排队初诣的人群，远处是晴空塔。</figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <main>
+    <section class="block" id="calendar">
+      <div class="wrap">
+        <h2>先看日历：哪天开，哪天关</h2>
+        <p class="intro">元旦三天是日本一年里最安静的几天。独立小店多半关门，神社寺庙和商场反而最热闹。行程按营业规律来排，比按景点排更重要。</p>
+        <div class="days" id="days"></div>
+        <div class="days-note reveal">
+          <img src="img/kadomatsu-kitte.jpg" alt="2026 年 1 月 3 日，KITTE 丸之内入口两侧摆着门松" loading="lazy">
+          <p id="calendarNote"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="areas-sec">
+      <div class="wrap">
+        <h2>按气质挑街区</h2>
+        <p class="intro">每个街区按「轻奢、现代、古典、生活气息」各打 1 到 5 分。先在坐标图里找到想要的感觉，再往下看每个街区的必逛点和新年营业情况。</p>
+        <div class="chips" id="mapChips" role="group" aria-label="按风格突出街区"></div>
+        <div class="map-card reveal" id="mapCard"></div>
+        <div class="areas" id="areas"></div>
+      </div>
+    </section>
+
+    <section class="block" id="plan">
+      <div class="wrap">
+        <h2>五日路线</h2>
+        <p class="intro">以 1/1 住芝公园、1/2 起住东京巨蛋酒店为前提排的。每天只排一到两个街区，留出排队和吃饭的时间。点餐厅名可以跳到下面的餐厅卡片。</p>
+        <div class="tabs" id="planTabs" role="group" aria-label="选择日期"></div>
+        <div class="plan" id="planBody"></div>
+      </div>
+    </section>
+
+    <section class="block" id="food">
+      <div class="wrap">
+        <h2>餐厅：从老铺到轻奢</h2>
+        <p class="intro">每家都标了价格、预约方式和新年营业情况。新年安排大多参考 2026 年元旦，2027 年的一般 12 月中下旬才公布，出发前请再核对一次。</p>
+        <div class="filters">
+          <div class="row"><span>类型</span><div class="chips" id="fGroup" role="group" aria-label="按类型筛选"></div></div>
+          <div class="row"><span>档次</span><div class="chips" id="fTier" role="group" aria-label="按档次筛选"></div></div>
+          <div class="row"><span>新年营业</span><div class="chips" id="fNy" role="group" aria-label="按新年营业筛选"></div></div>
+          <div class="row"><span>区域</span><div class="chips" id="fNear" role="group" aria-label="按区域筛选"></div></div>
+        </div>
+        <div class="result-bar">
+          <p id="rCount" aria-live="polite"></p>
+          <button class="reset" id="rReset" type="button">清除筛选</button>
+        </div>
+        <div class="rgrid" id="rgrid"></div>
+      </div>
+    </section>
+
+    <section class="block" id="jan1">
+      <div class="wrap">
+        <h2>1 月 1 日，去哪吃饭</h2>
+        <p class="intro">元旦当天是全程最难吃饭的一天。下面这些地方按 2026 年的经验是开门的。</p>
+        <div class="bento" id="bento"></div>
+      </div>
+    </section>
+
+    <section class="block" id="tips">
+      <div class="wrap">
+        <h2>出发前要知道的</h2>
+        <p class="intro">订位、付款、交通和新年礼仪，几条最容易踩坑的。</p>
+        <div class="faq" id="faq"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <h3>资料来源</h3>
+          <p>整理于 2026 年 11 月。新年营业时间以 2026 年元旦的实际安排为参考，2027 年会有变化，以各店官网为准。标有「部分信息待复核」的餐厅，出发前请再确认一次。</p>
+          <ul id="sources"></ul>
+        </div>
+        <div>
+          <h3>图片来源</h3>
+          <p>照片均来自 Wikimedia Commons，按各自的授权使用。</p>
+          <ul id="credits"></ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
